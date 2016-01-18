@@ -37,3 +37,18 @@ query_2 = {"age" : 45}
 # #SELECT name & I don't want to see _id
 projection = {"name" : 1, "_id" : 0}
 print list(collection.find(query_2, projection))
+
+
+# #Insert
+# #insert_one()
+# #insert_many([list_of_documents_to_be_inserted], flag = order_in_which_they_have_to_be_inserted )
+
+# #Update
+# #update_one()
+# #update_many()
+
+# #upsert()
+
+# #Delete
+# #delete_one()
+# #delete_many()
