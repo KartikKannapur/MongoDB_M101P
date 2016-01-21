@@ -39,20 +39,36 @@ for var_json in list(collection.find()):
 
 	print "\n\n\n"
 
+dict_remove_homework = {}
 
 for k,v in dict_homework.iteritems():
-	print k, v
-	for ele in v:
-		print k,ele, ele.values()[0]["score"]
-# 
-	# #Round it to 6 decimal places
-	print round(min([i.keys()[0] for i in v]), 6)
+# 	print k, v
 # 	for ele in v:
 # 		print k,ele, ele.values()[0]["score"]
-# 		if int(ele.values()[0]["score"]) == int(min([i.keys()[0] for i in v])):
-# 			print " --- Removing --- "
-# 			print ele.values()[0]
-# 			collection.remove(ele.values()[0])
+# 
+	# #Round it to 6 decimal places
+	# print round(min([i.keys()[0] for i in v]), 6)
+	for ele in v:
+		if round(ele.values()[0]["score"], 6) == round(min([i.keys()[0] for i in v]), 6):
+			# print " --- Removing --- "
+			# print ele.values()[0]
+			# print k,v
+			dict_remove_homework[k] = ele.values()[0]
+			# collection.remove(ele.values()[0])
 
-# 	print "\n\n"
+print " --- Remove from MongoDB --- "
+for k,v in dict_remove_homework.iteritems():
+	print k, v
+	# print list(collection.find({"_id" : k}))
+	collection.update({"_id" : k}, {"$pull" : {"scores" : v}})
 
+
+# print list(collection.find({"_id" : 199}))
+
+# #PyMongo Commands
+# #posts.find_one({"_id":1234})
+# #posts.update({"_id":1234},{"$set":{"from_user":"Altons","source":"Ipython notebook"}})
+
+# #Update
+# #posts.update({"_id":5678},{"$set":{"skills":["python","SAS","R","javascript","java"]}})
+# #posts.update({"_id":5678},{"$pull":{"skills":"java"}})
