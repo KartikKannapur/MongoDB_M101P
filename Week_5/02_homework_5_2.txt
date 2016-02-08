@@ -1,0 +1,21 @@
+Queries:
+
+db.zips.aggregate([{"$match" : {"$or" : [{"state" : "CA"}, {"state" : "NY"}]}}])
+
+db.zips.aggregate([{"$match" : {"$or" : [{"state" : "CA"}, {"state" : "NY"}]}}, {"$out" : "zips_ca_ny"}])
+db.getCollection('zips_ca_ny').find({"pop" : {"$gt" : 25000}})
+db.zips_ca_ny.aggregate([{"$match" : {"pop" : {"$gt" : 25000}}}, {"$group" : {"_id" : {"state" : "$state"}, "avg" : {"$avg" : "$pop"}}}])
+
+
+db.zips.aggregate([
+  {$group:{
+    "_id": {state: "$state",
+            city: "$city"},
+    pop: {"$sum": "$pop"}
+  }},
+  {$match:{"pop":{"$gt":25000}, "_id.state": {"$in": ["CA", "NY"]}}},
+  {$group:{
+    "_id":null,
+    avg: {"$avg": "$pop"}
+  }}  
+])

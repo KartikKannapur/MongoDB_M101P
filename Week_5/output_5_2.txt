@@ -1,0 +1,24 @@
+ --- Return all documents --- 
+{u'city': u'LA MESA', u'state': u'CA', u'_id': u'91941', u'pop': 42536, u'loc': [-117.011541, 32.760431]}
+{u'city': u'WESTBURY', u'state': u'NY', u'_id': u'11590', u'pop': 38026, u'loc': [-73.57226, 40.755749]}
+{u'city': u'ROCHESTER', u'state': u'NY', u'_id': u'14621', u'pop': 36055, u'loc': [-77.604284, 43.183362]}
+{u'city': u'FLUSHING', u'state': u'NY', u'_id': u'11354', u'pop': 51947, u'loc': [-73.824142, 40.766722]}
+{u'city': u'LOS ANGELES', u'state': u'CA', u'_id': u'90019', u'pop': 64996, u'loc': [-118.33426, 34.048158]}
+{u'city': u'SAN DIEGO', u'state': u'CA', u'_id': u'92111', u'pop': 45487, u'loc': [-117.17081, 32.797185]}
+{u'city': u'MILL VALLEY', u'state': u'CA', u'_id': u'94941', u'pop': 27746, u'loc': [-122.533885, 37.895757]}
+{u'city': u'LOS ANGELES', u'state': u'CA', u'_id': u'90031', u'pop': 39706, u'loc': [-118.211279, 34.078349]}
+{u'city': u'VISALIA', u'state': u'CA', u'_id': u'93277', u'pop': 51620, u'loc': [-119.306471, 36.311379]}
+{u'city': u'BELLFLOWER', u'state': u'CA', u'_id': u'90706', u'pop': 61650, u'loc': [-118.126527, 33.886676]}
+{u'city': u'TORRANCE', u'state': u'CA', u'_id': u'90505', u'pop': 33933, u'loc': [-118.350733, 33.810635]}
+{u'city': u'ORANGE', u'state': u'CA', u'_id': u'92669', u'pop': 31583, u'loc': [-117.800285, 33.791672]}
+{u'city': u'FORT ORD', u'state': u'CA', u'_id': u'93941', u'pop': 25009, u'loc': [-121.804999, 36.644627]}
+{u'city': u'SHORE ACRES', u'state': u'CA', u'_id': u'94565', u'pop': 64053, u'loc': [-121.908178, 38.016887]}
+{u'city': u'GOLD RIVER', u'state': u'CA', u'_id': u'95670', u'pop': 42461, u'loc': [-121.289434, 38.601897]}
+{u'city': u'SANTA CRUZ', u'state': u'CA', u'_id': u'95062', u'pop': 34287, u'loc': [-121.988055, 36.972101]}
+{u'city': u'JAMAICA', u'state': u'NY', u'_id': u'11434', u'pop': 50464, u'loc': [-73.77584, 40.677483]}
+{u'city': u'SUISUN CITY', u'state': u'CA', u'_id': u'94585', u'pop': 31081, u'loc': [-122.042003, 38.240834]}
+{u'city': u'OAKLAND', u'state': u'CA', u'_id': u'94603', u'pop': 27303, u'loc': [-122.171017, 37.740239]}
+{u'city': u'BINGHAMTON', u'state': u'NY', u'_id': u'13905', u'pop': 30741, u'loc': [-75.930865, 42.115051]}
+{u'city': u'ENDWELL', u'state': u'NY', u'_id': u'13760', u'pop': 46236, u'loc': [-76.056927, 42.114089]}
+{u'city': u'BROOKLYN', u'state': u'NY', u'_id': u'11205', u'pop': 36852, u'loc': [-73.96662, 40.692433]}
+{u'city': u'LA JOLLA', u'state': u'CA', u'_id': u'92037', u'pop': 40399, u'loc': [-117.25208, 32.845488]}
