@@ -1,0 +1,10 @@
+Queries:
+
+db.grades.aggregate([{"$unwind" : "$scores"}, {"$group" : {"_id" : {"s_id" : "$student_id", "c_id" : "$class_id"}, "avg_scr" : {"$avg" : "$scores.score"}}}])
+
+
+db.grades.aggregate([{"$match" : {"scores.type" : {"$in" : ["exam", "homework"]}}}, 
+{"$unwind" : "$scores"}, 
+{"$group" : {"_id" : {"s_id" : "$student_id", "c_id" : "$class_id"}, "avg_scr" : {"$avg" : "$scores.score"}}},
+{"$group" : {"_id" : {"cc_id" : "$_id.c_id"}, "c_avg_scr" : {"$avg" : "$avg_scr"}}},
+{"$sort" : {"c_avg_scr" : -1}}])
